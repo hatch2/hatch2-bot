@@ -8,7 +8,7 @@ RUN npm install hubot-slack bitbucket2slack --save
 RUN hubot --create bot
 
 ADD *.json /bot/
-ADD scripts/greeting.coffee /bot/scripts/
+ADD scripts/*.coffee /bot/scripts/
 
 EXPOSE 80
 
