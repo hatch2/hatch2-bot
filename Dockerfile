@@ -2,14 +2,19 @@ FROM node:latest
 
 MAINTAINER hatch2
 
-RUN npm install -g hubot coffee-script
+# install hubot
+RUN npm install -g hubot yo generator-hubot coffee-script hubot-slack
 RUN npm install hubot-slack bitbucket2slack --save
 
-RUN hubot --create bot
+# create hubot
+RUN yo hubot --name coco --adapter slack --defaults
 
-ADD *.json /bot/
-ADD scripts/*.coffee /bot/scripts/
+# copy files
+ADD *.json ./
+ADD *.coffee ./
+
+CMD rm -f scripts/example.coffee
 
 EXPOSE 80
 
-CMD cd /bot; bin/hubot --adapter slack
+CMD bin/hubot --adapter slack
