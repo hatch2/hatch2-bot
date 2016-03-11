@@ -26,7 +26,4 @@ CMD rm -f scripts/example.coffee
 ENV PORT 8080
 EXPOSE 8080
 
-ENV TZ Asia/Tokyo
-ENV HUBOT_SLACK_TOKEN xoxb-25302101974-TODEWiOokIyjplvVIEl7EKtF
-
 CMD bin/hubot --adapter slack
