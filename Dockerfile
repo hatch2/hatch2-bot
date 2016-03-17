@@ -10,7 +10,7 @@ WORKDIR /home/hubot
 ENV NODE_PATH /home/hubot/node_modules/
 
 # install hubot
-RUN npm install hubot yo generator-hubot coffee-script hubot-slack bitbucket2slack hubot-heroku-keepalive --save
+RUN npm install hubot yo generator-hubot coffee-script hubot-slack bitbucket2slack --save
 
 ENV PATH /home/hubot/node_modules/.bin:$PATH
 
