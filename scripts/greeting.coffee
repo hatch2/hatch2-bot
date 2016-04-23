@@ -1,3 +1,6 @@
+# Description:
+#
+
 module.exports = (robot) ->
   robot.hear /(すいません|ごめん|申し訳)/, (msg) ->
     msg.send msg.random [
@@ -13,13 +16,11 @@ module.exports = (robot) ->
       "ばいばい(*｀・ヮ・´*)و ̑̑",
     ]
 
-
-  robot.hear /((げんご|言語)(りゅう|竜|龍)|@?gengoryu)$/, (msg) ->
+  robot.hear /@?coco$/, (msg) ->
     msg.send msg.random [
       "呼ばれた気がした( ´・◡・｀)",
       "なんでしょうか°˖✧◝(⁰▿⁰)◜✧˖°",
     ]
-
 
   robot.hear /(宜|よろ)しく((おねが|お願)(い|いいた)します|ね|)/, (msg) ->
     msg.send msg.random [
@@ -27,7 +28,6 @@ module.exports = (robot) ->
       "よろしくー(っ,,>﹏<,,c)",
       "よろしくね°˖✧◝(⁰▿⁰)◜✧˖°",
     ]
-
 
   robot.hear /(誰もいない|みんな(寝|ね)てる)/, (msg) ->
     msg.send msg.random [
@@ -49,7 +49,6 @@ module.exports = (robot) ->
       "スーパー行こうよ( ´・◡・｀)"
     ]
 
-
   robot.hear /(おはようございます|おはよ|(起|お)きた|(寝|ね)てた|(おは|おき)ー)/, (msg) ->
     msg.send msg.random [
       "おはよーー(*｀・ヮ・´*)و ̑̑",
@@ -59,13 +58,11 @@ module.exports = (robot) ->
       "良い朝(っ ´-` c)"
     ]
 
-
   robot.hear /((ね|寝)(よ|る)|おや(すみ(なさい)?|すー))/, (msg) ->
     msg.send msg.random [
       "おやすみー(っ ´-` c)",
       "おやすみなさい( ˘ω˘ ) https://pbs.twimg.com/media/BtcSM8BCYAE3_8j.jpg:large",
     ]
-
 
   robot.hear /(帰|かえ)(る|ろ|ります)$/, (msg) ->
     msg.send msg.random [
